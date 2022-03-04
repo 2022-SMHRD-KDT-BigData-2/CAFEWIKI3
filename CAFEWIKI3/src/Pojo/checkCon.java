@@ -26,12 +26,9 @@ public class checkCon extends HttpServlet {
 		MemberDAO dao = new MemberDAO();
 		MemberVO vo = dao.idCheck(id);
 
-		// 응답
 		response.setCharacterEncoding("UTF-8");
 		PrintWriter out = response.getWriter();
 
-		// vo가 비어있으면 out.print(true); -> 사용가능한 이메일
-		// vo가 비어있지 않으면 out.print(false); -> 중복된 이메일
 		out.print(vo == null);
 	}
 

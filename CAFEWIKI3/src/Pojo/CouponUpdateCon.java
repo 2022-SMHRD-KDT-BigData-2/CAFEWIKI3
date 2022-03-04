@@ -16,7 +16,6 @@ public class CouponUpdateCon implements Command {
 		HttpSession session = request.getSession();
 		MemberVO vo = (MemberVO) session.getAttribute("vo");
 		String o_num = vo.getO_num();
-		// 현재 로그인한 사업자의 사업자 번호를 가지고 온다
 		String id = request.getParameter("id");
 		String update= request.getParameter("update");
 		int stamp = Integer.parseInt(request.getParameter("stamp"));
@@ -30,7 +29,7 @@ public class CouponUpdateCon implements Command {
 		int cnt = dao.update(cvo);
 		
 		if(cnt>0) {
-			System.out.println("update 성공");
+			System.out.println("update success");
 		}
 
 		

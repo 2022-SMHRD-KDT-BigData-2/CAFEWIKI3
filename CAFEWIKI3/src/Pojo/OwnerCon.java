@@ -36,7 +36,6 @@ public class OwnerCon implements Command {
 		List<CafeVO> cvo = (List<CafeVO>) cdao.selectCafe(mvo.getO_num());
 		List<BoardVO> bvo = (List<BoardVO>) cdao.selectBoard(mvo.getO_num());
 
-		// request scope¿¡ list ´ã±â
 		request.setAttribute("cvo", cvo);
 		request.setAttribute("bvo", bvo);
 

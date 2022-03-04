@@ -39,7 +39,6 @@ public class cafeMainCon implements Command {
 		
 		List<BoardVO> bvo = (List<BoardVO>) cdao.selectBoard(o_num);
 
-		// request scope¿¡ list ´ã±â
 		request.setAttribute("bvo", bvo);
 
 		

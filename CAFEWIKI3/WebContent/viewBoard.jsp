@@ -74,7 +74,7 @@
                               <%}else{ %>
                               <button class="btn"  id="btnJoin" type="button" onclick="location.href='CafeMain.jsp'">뒤로가기</button> 
                                   <%} %>
-                        </td>
+                        </td>  
                     </tr>
 
                 </table>

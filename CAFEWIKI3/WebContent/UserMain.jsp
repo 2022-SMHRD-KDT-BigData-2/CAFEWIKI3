@@ -4,13 +4,13 @@
 <%@page import="java.util.List"%>
 <%@page import="Model.BoardVO"%>
 <%@page import="Model.CafeVO"%>
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-	pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="EUC-KR">
-<title>¸¶ÀÌÆäÀÌÁö</title>
+<meta charset="UTF-8">
+<title>ë§ˆì´íŽ˜ì´ì§€</title>
 <link rel="stylesheet" href="./css/mypage.css">
 <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap"
 	rel="stylesheet">
@@ -142,7 +142,7 @@ a {
 			<div class="logo">
 				<img id="img" src="./image/login/coffee.png">
 				<p id="title">Cafe Wiki</p>
-				<button id="btn" type="button" onclick="location.href='logout.do'">·Î±×¾Æ¿ô</button>
+				<button id="btn" type="button" onclick="location.href='logout.do'">ë¡œê·¸ì•„ì›ƒ</button>
 			</div>
 		</div>
 
@@ -152,7 +152,7 @@ a {
 
 		<div class="Main" style="font-family: 'Jua';">
 			<ul id="bar">
-				<li id="welcome"><%=vo.getName()%>´Ô È¯¿µÇÕ´Ï´Ù.</li>
+				<li id="welcome"><%=vo.getName()%>ë‹˜ í™˜ì˜í•©ë‹ˆë‹¤.</li>
 				<li id="barcode-input" style="font-family: '3OF9_NEW';"><%="*" + vo.getU_num() + "*"%></li>
 				<li id="num"><%=vo.getU_num()%></li>
 			</ul>
@@ -199,8 +199,8 @@ a {
 			%>
 			<ul id="cafe-name">
 				<li id="name<%=i + 1%>"><a
-					href="CafeMain.do?store=<%=CafeName2[i]%>"><%=CafeName2[i]%></a> º¸À¯
-					½ºÅÆÇÁ ¼ö : <%=CouponSum[i]%><a id="hide<%=i%>" onclick="dis()"> <img
+					href="CafeMain.do?store=<%=CafeName2[i]%>"><%=CafeName2[i]%></a> ë³´ìœ 
+					ìŠ¤íƒ¬í”„ ìˆ˜ : <%=CouponSum[i]%><a id="hide<%=i%>" onclick="dis()"> <img
 						class="plus" src="./image/plus.png" align="right"></a><br></li>
 				<%
 					int i2 = CouponSum[i] % 10;
@@ -232,8 +232,8 @@ a {
 			%>
 			<ul id="cafe-name">
 				<li id="name<%=i + 1%>"><a
-					href="CafeMain.do?store=<%=CafeName2[i]%>"><%=CafeName2[i]%></a> º¸À¯
-					ÄíÆù¼ö : <%=CouponSum[i]%><a id="hide<%=i%>" onclick="dis()"> <img
+					href="CafeMain.do?store=<%=CafeName2[i]%>"><%=CafeName2[i]%></a> ë³´ìœ 
+					ì¿ í°ìˆ˜ : <%=CouponSum[i]%><a id="hide<%=i%>" onclick="dis()"> <img
 						class="plus" src="./image/plus.png"></a><br></li>
 			
 			<%
@@ -269,16 +269,16 @@ a {
 		<div class="footer" style="font-family: 'Jua';">
 			<div id="btn_group">
 				<button class="btn" id="btn1" type="button"
-					onclick="location.href='UserMain.jsp'">¸¶ÀÌÆäÀÌÁö</button>
+					onclick="location.href='UserMain.jsp'">ë§ˆì´íŽ˜ì´ì§€</button>
 
 				<button class="btn" id="btn2" type="button"
-					onclick="location.href='rank.do'">Ä«Æä °Ë»ö</button>
+					onclick="location.href='rank.do'">ì¹´íŽ˜ ê²€ìƒ‰</button>
 
 				<button class="btn" id="btn3" type="button"
-					onclick="location.href='MyCoupon.jsp'">³» ÄíÆù °ü¸®</button>
+					onclick="location.href='MyCoupon.jsp'">ë‚´ ì¿ í° ê´€ë¦¬</button>
 
 				<button class="btn" id="btn4" type="button"
-					onclick="location.href='Update.jsp'">Á¤º¸ ¼öÁ¤</button>
+					onclick="location.href='Update.jsp'">ì •ë³´ ìˆ˜ì •</button>
 			</div>
 		</div>
 		<!-- footer & menu part -->

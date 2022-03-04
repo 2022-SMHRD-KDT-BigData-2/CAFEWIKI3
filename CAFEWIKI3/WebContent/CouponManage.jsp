@@ -1,10 +1,10 @@
 <%@page import="Model.CouponVO"%>
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="EUC-KR">
+<meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,7 +27,7 @@
             <div class="logo">
                 <img id="img" src="./image/login/coffee.png">
                 <p id="title">Cafe Wiki</p>
-                <button class="btn" id="btn" type="button" onclick="location.href='logout.do'">·Î±×¾Æ¿ô</button>
+                <button class="btn" id="btn" type="button" onclick="location.href='logout.do'">ë¡œê·¸ì•„ì›ƒ</button>
             </div>
         </div>
 
@@ -37,18 +37,18 @@
         <div class="Main">
             <div class="userwrap">
                 <div class="icons">
-                    <b><%=svo.getId() %>´Ô</b>
+                    <b><%=svo.getId() %>ë‹˜</b>
                 </div>
                     
                 <div class="coupon">
                     <form id = "text" action="couponUpdate.do?id=<%=svo.getId()%>" method="post">
                         <input id="plus1" type="radio"  name="update" value="plus">
-                        <label for="plus1"><span>Àû¸³</span></label> 
+                        <label for="plus1"><span>ì ë¦½</span></label> 
                         <input id="minus1" type="radio" name="update" value="minus">
-                        <label for="minus1" ><span>»ç¿ë</span></label><br>
+                        <label for="minus1" ><span>ì‚¬ìš©</span></label><br>
 
                         <input id="input1" type="text" name="stamp">
-                        <input class="btn" id="input2" type="submit" value="Àû¿ë" onclick="say()">
+                        <input class="btn" id="input2" type="submit" value="ì ìš©" onclick="say()">
                     </form>
                 </div>
 
@@ -63,17 +63,17 @@
          <!-- footer & menu part -->
         <div class="footer">
 			<div id="btn_group">
-				<button class="btn" id="btn1" type="button" onclick="location.href='cafe.do'">¸¶ÀÌÆäÀÌÁö</button>
+				<button class="btn" id="btn1" type="button" onclick="location.href='cafe.do'">ë§ˆì´íŽ˜ì´ì§€</button>
 
 				<button class="btn" id="btn2" type="button"
-					onclick="location.href='BarcodeScan.jsp'">ÄíÆù
-					°ü¸®</button>
+					onclick="location.href='BarcodeScan.jsp'">ì¿ í°
+					ê´€ë¦¬</button>
 
 				<button class="btn" id="btn3" type="button"
-					onclick="location.href='customerManage.do'">³» È¸¿ø °ü¸®</button>
+					onclick="location.href='customerManage.do'">ë‚´ íšŒì› ê´€ë¦¬</button>
 
-				<button class="btn" id="btn4" type="button" onclick="location.href='Update.jsp'">Á¤º¸
-					¼öÁ¤</button>
+				<button class="btn" id="btn4" type="button" onclick="location.href='Update.jsp'">ì •ë³´
+					ìˆ˜ì •</button>
 			</div>
 		</div>
         <!-- footer & menu part -->
@@ -85,7 +85,7 @@
 function say(){
 	var textBox = document.getElementById("input1");	
 	if(textBox != null ){
-		alert(<%=svo.getId()%>+"´Ô¿¡°Ô"+textBox.value+"°³¸¦ Àû¸³/»ç¿ëÇÏ½Ã°Ú½À´Ï±î?");
+		alert(<%=svo.getId()%>+"ë‹˜ì—ê²Œ"+textBox.value+"ê°œë¥¼ ì ë¦½/ì‚¬ìš©í•˜ì‹œê² ìŠµë‹ˆê¹Œ?");
 		}		
 	}
 </script >

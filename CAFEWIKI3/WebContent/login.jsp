@@ -1,12 +1,12 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-	pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="EUC-KR">
+<meta charset="UTF-8">
 <link rel="stylesheet" href="./css/style.css">
 <script src="./js/jquery-3.6.0.js"></script>
-<title>�α���</title>
+<title>로그인</title>
 </head>
 
 <body>
@@ -29,8 +29,8 @@
 				</div>
 
 				<div class="check">
-					<input type="checkbox" id="chk_id"> <label for="chk_id">���̵�
-						����</label>
+					<input type="checkbox" id="chk_id"> <label for="chk_id">아이디
+						저장</label>
 				</div>
 
 				<div class="btn-area">
@@ -39,15 +39,15 @@
 			</ul>
 		</form>
 		<div class="caption">
-			<a  onclick="location.href='join.jsp'">ȸ������</a> 
-			<a onclick="location.href='pwSearch.jsp'">��й�ȣ ã��</a>
+			<a  onclick="location.href='join.jsp'">회원가입</a> 
+			<a onclick="location.href='pwSearch.jsp'">비밀번호 찾기</a>
 		</div>
 	</section>
 	<script src="js/jquery-3.6.0.js"></script>
 	<script type="text/javascript">
 	let login_status = "<%= login%>"
 	if(login_status == 'F'){
-		alert('���̵�/��й�ȣ�� Ȯ���� �ּ���')
+		alert('아이디/비밀번호를 확인해 주세요')
 	}
 	
 	</script>

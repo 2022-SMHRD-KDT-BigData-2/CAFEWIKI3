@@ -1,12 +1,12 @@
 <%@page import="java.util.ArrayList"%>
 <%@page import="Model.CouponVO"%>
 <%@page import="java.util.List"%>
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-	pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="EUC-KR">
+<meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -50,7 +50,7 @@
 				<img id="img" src="./image/login/coffee.png">
 				<p id="title">Cafe Wiki</p>
 				<button class="btn" id="btn" type="button"
-					onclick="location.href='logout.do'">·Î±×¾Æ¿ô</button>
+					onclick="location.href='logout.do'">ë¡œê·¸ì•„ì›ƒ</button>
 			</div>
 		</div>
 
@@ -73,7 +73,7 @@
 
 								<p class="btn">
 									ID :
-									<%=id.get(i)%><br> º¸À¯ ½ºÅÆÇÁ ¼ö :
+									<%=id.get(i)%><br> ë³´ìœ  ìŠ¤íƒ¬í”„ ìˆ˜ :
 									<%=CouponSum[i]%></p>
 
 							</td>
@@ -85,12 +85,12 @@
 				<span style="display: none;" id="dis<%=i%>">
 					<table class="table2">
 
-						<h3 class="btn">ÃÖ±Ù ³»¿ª</h3>
+						<h3 class="btn">ìµœê·¼ ë‚´ì—­</h3>
 
 						<tr class="btn">
-							<th>Àû¸³/»ç¿ë</th>
-							<th>°³¼ö</th>
-							<th>³¯Â¥</th>
+							<th>ì ë¦½/ì‚¬ìš©</th>
+							<th>ê°œìˆ˜</th>
+							<th>ë‚ ì§œ</th>
 						</tr>
 						<%
 							for (CouponVO cusvo : clist) {
@@ -101,11 +101,11 @@
 								<%
 									int a = cusvo.getStamp();
 								if (a > 0) {
-								%>Àû¸³ <%
+								%>ì ë¦½ <%
 									} else if (a < 0) {
-								%> »ç¿ë <%
+								%> ì‚¬ìš© <%
 									} else {
-								%> ÄíÆù»ý¼º <%
+								%> ì¿ í°ìƒì„± <%
 									}
 								%>
 							</td>
@@ -135,16 +135,16 @@
 		<div class="footer">
 			<div id="btn_group">
 				<button class="btn" id="btn1" type="button"
-					onclick="location.href='cafe.do'">¸¶ÀÌÆäÀÌÁö</button>
+					onclick="location.href='cafe.do'">ë§ˆì´íŽ˜ì´ì§€</button>
 
 				<button class="btn" id="btn2" type="button"
-					onclick="location.href='BarcodeScan.jsp'">ÄíÆù °ü¸®</button>
+					onclick="location.href='BarcodeScan.jsp'">ì¿ í° ê´€ë¦¬</button>
 
 				<button class="btn" id="btn3" type="button"
-					onclick="location.href='customerManage.do'">³» È¸¿ø °ü¸®</button>
+					onclick="location.href='customerManage.do'">ë‚´ íšŒì› ê´€ë¦¬</button>
 
 				<button class="btn" id="btn4" type="button"
-					onclick="location.href='Update.jsp'">Á¤º¸ ¼öÁ¤</button>
+					onclick="location.href='Update.jsp'">ì •ë³´ ìˆ˜ì •</button>
 			</div>
 		</div>
 		<!-- footer & menu part -->

@@ -19,7 +19,7 @@ public class writeCon implements Command {
 
 		int maxSize = 1024 * 1024 * 5; 
 
-		String encoding = "euc-kr";
+		String encoding = "UTF-8";
 
 		MultipartRequest multi;
 

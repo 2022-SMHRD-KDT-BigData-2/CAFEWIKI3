@@ -1,10 +1,10 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-	pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="EUC-KR">
-<title>È¸¿ø°¡ÀÔ</title>
+<meta charset="UTF-8">
+<title>íšŒì›ê°€ì…</title>
 <link rel="stylesheet" href="./css/join.css">
 <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap"
 	rel="stylesheet">
@@ -52,82 +52,82 @@
 
 				<div>
 					<h3>
-						<label for="id">¾ÆÀÌµğ</label>
+						<label for="id">ì•„ì´ë””</label>
 					</h3>
-					<span class="box int_id"> <input type="text" class="int" maxlength="20" id="check" name="id" placeholder="¾ÆÀÌµğ¸¦ ÀÔ·ÂÇÏ¼¼¿ä" onclick=" registerCheck()"></span>					
-					<span><button	id="btn1" type="button" onclick="idCheck()">Áßº¹È®ÀÎ</button></span>
+					<span class="box int_id"> <input type="text" class="int" maxlength="20" id="check" name="id" placeholder="ì•„ì´ë””ë¥¼ ì…ë ¥í•˜ì„¸ìš”" onclick=" registerCheck()"></span>					
+					<span><button	id="btn1" type="button" onclick="idCheck()">ì¤‘ë³µí™•ì¸</button></span>
 					<span id="result"></span> 
 				   <span class="error_next_box"></span>
 				</div>
 
 				<div>
 					<h3 class="join_title">
-						<label for="id">»ç¾÷ÀÚ¹øÈ£</label>
+						<label for="id">ì‚¬ì—…ìë²ˆí˜¸</label>
 					</h3>
-					<span class="box int_B_id"> <input type="text" class="int" maxlength="20" name="o_num" id="check2" placeholder="»ç¾÷ÀÚ¹øÈ£¸¦ ÀÔ·ÂÇÏ¼¼¿ä"></span>	 
-					<span><button type="button" id="btn2" onclick="o_numCheck()">Áßº¹È®ÀÎ</button></span> 
+					<span class="box int_B_id"> <input type="text" class="int" maxlength="20" name="o_num" id="check2" placeholder="ì‚¬ì—…ìë²ˆí˜¸ë¥¼ ì…ë ¥í•˜ì„¸ìš”"></span>	 
+					<span><button type="button" id="btn2" onclick="o_numCheck()">ì¤‘ë³µí™•ì¸</button></span> 
 					<span id="result2"></span>
 					<span class="error_next_box"></span>
 				</div>
 
 				<div>
 					<h3 class="join_title">
-						<label for="name">ÀÌ¸§</label>
+						<label for="name">ì´ë¦„</label>
 					</h3>
 					<span class="box int_name"> 
-					<input type="text" name="name" id="name" class="int" maxlength="20" placeholder="ÀÌ¸§À» ÀÔ·ÂÇÏ¼¼¿ä"></span> 
+					<input type="text" name="name" id="name" class="int" maxlength="20" placeholder="ì´ë¦„ì„ ì…ë ¥í•˜ì„¸ìš”"></span> 
 					<span class="error_next_box"></span>
 				</div>
 
 				<div>
 					<h3 class="join_title">
-						<label for="pswd1">ºñ¹Ğ¹øÈ£</label>
+						<label for="pswd1">ë¹„ë°€ë²ˆí˜¸</label>
 					</h3>
-					<span class="box int_pass"> <input type="password" name="pw" id="pw" class="int" maxlength="20" placeholder="ºñ¹Ğ¹øÈ£¸¦ ÀÔ·ÂÇÏ¼¼¿ä"></span>			
+					<span class="box int_pass"> <input type="password" name="pw" id="pw" class="int" maxlength="20" placeholder="ë¹„ë°€ë²ˆí˜¸ë¥¼ ì…ë ¥í•˜ì„¸ìš”"></span>			
 					<span class="error_next_box"></span>
 				</div>
 
 				<div>
 					<h3 class="join_title">
-						<label for="phoneNo">ÈŞ´ëÀüÈ­</label>
+						<label for="phoneNo">íœ´ëŒ€ì „í™”</label>
 					</h3>
-					<span class="box int_mobile"> <input type="tel" name="tel" class="int" maxlength="16" placeholder="ÀüÈ­¹øÈ£¸¦ ÀÔ·ÂÇÏ¼¼¿ä"></span>
+					<span class="box int_mobile"> <input type="tel" name="tel" class="int" maxlength="16" placeholder="ì „í™”ë²ˆí˜¸ë¥¼ ì…ë ¥í•˜ì„¸ìš”"></span>
 					 <span class="error_next_box"></span>
 				</div>
 
 				<div>
 					<h3 class="join_title">
-						<label for="email">ÀÌ¸ŞÀÏ</label>
+						<label for="email">ì´ë©”ì¼</label>
 					</h3>
-					<span class="box int_email"> <input type="text" name="email" id="email" class="int" maxlength="100" placeholder="EmailÀ» ÀÔ·ÂÇÏ¼¼¿ä ex) 1234@naver.com"></span>
+					<span class="box int_email"> <input type="text" name="email" id="email" class="int" maxlength="100" placeholder="Emailì„ ì…ë ¥í•˜ì„¸ìš” ex) 1234@naver.com"></span>
 				</div>
 
 				<div>
 					<h3 class="join_title">
-						<label for="birth">»ı³â¿ùÀÏ</label>
+						<label for="birth">ìƒë…„ì›”ì¼</label>
 					</h3>
 					<span class="box int_email"> <input type="text" name="birth"class="int" maxlength="100" placeholder="2022/02/25"></span>
 				</div>
 
 				<div>
 					<h3 class="join_title">
-						<label for="gender">¼ºº°</label>
+						<label for="gender">ì„±ë³„</label>
 					</h3>
 					<span class="box gender_code"> <select name="gender" class="sel">
-							<option>¼ºº°</option>
-							<option value="³²ÀÚ">³²ÀÚ</option>
-							<option value="¿©ÀÚ">¿©ÀÚ</option>
+							<option>ì„±ë³„</option>
+							<option value="ë‚¨ì">ë‚¨ì</option>
+							<option value="ì—¬ì">ì—¬ì</option>
 					</select>
-					</span> <span class="error_next_box">ÇÊ¼ö Á¤º¸ÀÔ´Ï´Ù.</span>
+					</span> <span class="error_next_box">í•„ìˆ˜ ì •ë³´ì…ë‹ˆë‹¤.</span>
 				</div>
 
 
 				<div class="btn_area">
 					<button onclick="location.href='login.jsp'" type="button" id="btnJoin2">
-						<span>µ¹¾Æ°¡±â</span>
+						<span>ëŒì•„ê°€ê¸°</span>
 					</button>
 					<button type="submit" id="btnJoin" onclick="fnSubmit(); return false;">
-						<span>°¡ÀÔÇÏ±â</span>
+						<span>ê°€ì…í•˜ê¸°</span>
 					</button>
 				</div>
 			</form>
@@ -146,13 +146,13 @@
 						success : function(res) {
 							console.log(res);
 							if (res == 'true') {
-								$('#result').html('»ç¿ë°¡´ÉÇÑ ¾ÆÀÌµğ ÀÔ´Ï´Ù.')
+								$('#result').html('ì‚¬ìš©ê°€ëŠ¥í•œ ì•„ì´ë”” ì…ë‹ˆë‹¤.')
 								$('#result').css('font-size','13px')
 								$('#result').val("Y");
 							} else {
-								$('#result').html('Áßº¹µÈ ¾ÆÀÌµğ ÀÔ´Ï´Ù.')
+								$('#result').html('ì¤‘ë³µëœ ì•„ì´ë”” ì…ë‹ˆë‹¤.')
 								$('#result').css('font-size','13px')
-								alert("Áßº¹µÈ ¾ÆÀÌµğÀÔ´Ï´Ù. ¾ÆÀÌµğ¸¦ º¯°æÇØÁÖ¼¼¿ä");
+								alert("ì¤‘ë³µëœ ì•„ì´ë””ì…ë‹ˆë‹¤. ì•„ì´ë””ë¥¼ ë³€ê²½í•´ì£¼ì„¸ìš”");
 								$('#result').val("N");
 							}
 						},
@@ -173,13 +173,13 @@
 						success : function(res) {
 							console.log(res);
 							if (res == 'true') {
-								$('#result2').html('»ç¿ë°¡´ÉÇÑ »ç¾÷ÀÚ¹øÈ£ÀÔ´Ï´Ù.')
+								$('#result2').html('ì‚¬ìš©ê°€ëŠ¥í•œ ì‚¬ì—…ìë²ˆí˜¸ì…ë‹ˆë‹¤.')
 								$('#result2').css('font-size','13px')
 								$('#result2').val("Y");
 							} else {
-								$('#result2').html('Áßº¹µÈ »ç¾÷ÀÚ¹øÈ£ÀÔ´Ï´Ù.')
+								$('#result2').html('ì¤‘ë³µëœ ì‚¬ì—…ìë²ˆí˜¸ì…ë‹ˆë‹¤.')
 								$('#result2').css('font-size','13px')
-								alert("Áßº¹µÈ »ç¾÷ÀÚ¹øÈ£ÀÔ´Ï´Ù. »ç¾÷ÀÚ¹øÈ£¸¦ º¯°æÇØÁÖ¼¼¿ä.");
+								alert("ì¤‘ë³µëœ ì‚¬ì—…ìë²ˆí˜¸ì…ë‹ˆë‹¤. ì‚¬ì—…ìë²ˆí˜¸ë¥¼ ë³€ê²½í•´ì£¼ì„¸ìš”.");
 								$('#result2').val("N");
 								
 							}
@@ -193,14 +193,14 @@
 				function fnSubmit(){
 					
 					if ($("#check").val() == null || $("#check").val() == "") {
-						alert("¾ÆÀÌµğ¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä.");
+						alert("ì•„ì´ë””ë¥¼ ì…ë ¥í•´ì£¼ì„¸ìš”.");
 						$("#check").focus();
 						 
 						return false;
 						}
 					
 					if ($("#result").val() != 'Y') {
-						alert("¾ÆÀÌµğ Áßº¹Ã¼Å©¸¦ ´­·¯ÁÖ¼¼¿ä.");
+						alert("ì•„ì´ë”” ì¤‘ë³µì²´í¬ë¥¼ ëˆŒëŸ¬ì£¼ì„¸ìš”.");
 						$("#result").focus();
 						 
 						return false;
@@ -208,7 +208,7 @@
 					
 					if ($("#check2").val() != "") {
 						if ($("#result2").val() != 'Y') {
-							alert("»ç¾÷ÀÚ¹øÈ£ Áßº¹Ã¼Å©¸¦ ´­·¯ÁÖ¼¼¿ä.");
+							alert("ì‚¬ì—…ìë²ˆí˜¸ ì¤‘ë³µì²´í¬ë¥¼ ëˆŒëŸ¬ì£¼ì„¸ìš”.");
 							$("#result2").focus();
 							 
 							return false;
@@ -216,21 +216,21 @@
 					}
 					
 					if ($("#name").val() == null || $("#name").val() == "") {
-						alert("ÀÌ¸§À» ÀÔ·ÂÇØÁÖ¼¼¿ä.");
+						alert("ì´ë¦„ì„ ì…ë ¥í•´ì£¼ì„¸ìš”.");
 						$("#name").focus();
 						 
 						return false;
 						}
 					
 					if ($("#pw").val() == null || $("#pw").val() == "") {
-						alert("ºñ¹Ğ¹øÈ£¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä.");
+						alert("ë¹„ë°€ë²ˆí˜¸ë¥¼ ì…ë ¥í•´ì£¼ì„¸ìš”.");
 						$("#pw").focus();
 						 
 						return false;
 						}
 					
 					if ($("#email").val() == null || $("#email").val() == "") {
-						alert("ÀÌ¸ŞÀÏÀ» ÀÔ·ÂÇØÁÖ¼¼¿ä.");
+						alert("ì´ë©”ì¼ì„ ì…ë ¥í•´ì£¼ì„¸ìš”.");
 						$("#email").focus();
 						 
 						return false;
@@ -238,12 +238,12 @@
 					var email_rule =  /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,3}$/i;
 					
 					if(!email_rule.test($("#email").val())){
-						alert("ÀÌ¸ŞÀÏÀ» Çü½Ä¿¡ ¸Â°Ô ÀÔ·ÂÇØÁÖ¼¼¿ä. ex) 1234@naver.com");
+						alert("ì´ë©”ì¼ì„ í˜•ì‹ì— ë§ê²Œ ì…ë ¥í•´ì£¼ì„¸ìš”. ex) 1234@naver.com");
 						$("#email").focus();
 						return false;
 						}
 					
-					if (confirm("È¸¿ø°¡ÀÔÇÏ½Ã°Ú½À´Ï±î?")) {
+					if (confirm("íšŒì›ê°€ì…í•˜ì‹œê² ìŠµë‹ˆê¹Œ?")) {
 						 
 						$("#join").submit();
 						 

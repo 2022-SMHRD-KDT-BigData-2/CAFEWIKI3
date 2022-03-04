@@ -2,12 +2,12 @@
 <%@page import="Model.CouponVO"%>
 <%@page import="Model.CafeVO"%>
 <%@page import="java.util.List"%>
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-	pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="EUC-KR">
+<meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -33,7 +33,7 @@ a {
 			<img id="img" src="./image/login/coffee.png">
 			<p id="title">Cafe Wiki</p>
 			<button class="btn" id="btn" type="button"
-				onclick="location.href='logout.do'">·Î±×¾Æ¿ô</button>
+				onclick="location.href='logout.do'">ë¡œê·¸ì•„ì›ƒ</button>
 		</div>
 	</div>
 
@@ -91,7 +91,7 @@ a {
 
 				</td>
 				<tr class="btn">
-					<td align="center">º¸À¯ ½ºÅÆÇÁ ¼ö = <%=CouponSum[i]%></td>
+					<td align="center">ë³´ìœ  ìŠ¤íƒ¬í”„ ìˆ˜ = <%=CouponSum[i]%></td>
 					<td id="plus" rowspan="2">
 					<a id="hide<%=i %>" onclick="dis()">
 					<img src="./image/plus.png"></a>
@@ -121,16 +121,16 @@ a {
 	<div class="footer">
 		<div id="btn_group">
 			<button class="btn" id="btn1" type="button"
-				onclick="location.href='UserMain.jsp'">¸¶ÀÌÆäÀÌÁö</button>
+				onclick="location.href='UserMain.jsp'">ë§ˆì´íŽ˜ì´ì§€</button>
 
 			<button class="btn" id="btn2" type="button"
-				onclick="location.href='SearchMain.jsp'">Ä«Æä °Ë»ö</button>
+				onclick="location.href='SearchMain.jsp'">ì¹´íŽ˜ ê²€ìƒ‰</button>
 
 			<button class="btn" id="btn3" type="button"
-				onclick="location.href='MyCoupon.jsp'">³» ÄíÆù °ü¸®</button>
+				onclick="location.href='MyCoupon.jsp'">ë‚´ ì¿ í° ê´€ë¦¬</button>
 
 			<button class="btn" id="btn4" type="button"
-				onclick="location.href='Update.jsp'">Á¤º¸ ¼öÁ¤</button>
+				onclick="location.href='Update.jsp'">ì •ë³´ ìˆ˜ì •</button>
 		</div>
 	</div>
 	<!-- footer & menu part -->

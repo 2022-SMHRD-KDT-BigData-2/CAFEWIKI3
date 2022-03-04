@@ -26,7 +26,7 @@ public class OwnerCon implements Command {
 		BoardVO vo3 = new BoardVO();
 
 		try {
-			request.setCharacterEncoding("EUC-KR");
+			request.setCharacterEncoding("UTF-8");
 		} catch (UnsupportedEncodingException e) {
 			e.printStackTrace();
 		}

@@ -1,9 +1,9 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="EUC-KR">
+<meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,7 +23,7 @@
             <div class="logo">
                 <img id="img" src="./image/login/coffee.png">
                 <p id="title">Cafe Wiki</p>
-                <button id="btn" type="button" onclick="location.href='logout.do'">∑Œ±◊æ∆øÙ</button>
+                <button id="btn" type="button" onclick="location.href='logout.do'">Î°úÍ∑∏ÏïÑÏõÉ</button>
             </div>
         </div>
 
@@ -33,24 +33,24 @@
 
         <div class="Main">
             <div class="wrapmain">
-                <h1> PW¿Áº≥¡§</h1>
+                <h1> PWÏû¨ÏÑ§Ï†ï</h1>
                 <form action="pwReset.do" method="post">
                 <div class="id">
                     <h3 class="join_title">
                         <label for="id">PW</label>
                     </h3>
                     <span class="box int_id">
-                        <input type="text" name="pw" id="id" class="int" maxlength="20" placeholder="ªı∑ŒøÓ ∫Òπ–π¯»£∏¶ ¿‘∑¬«ÿ¡÷ººø‰">
+                        <input type="text" name="pw" id="id" class="int" maxlength="20" placeholder="ÏÉàÎ°úÏö¥ ÎπÑÎ∞ÄÎ≤àÌò∏Î•º ÏûÖÎ†•Ìï¥Ï£ºÏÑ∏Ïöî">
                     </span>
                     <span class="error_next_box"></span>
                 </div>
 
                 <div class="btn_area">
                     <button onclick="location.href='pwSearch.jsp'" type="button" id="btnJoin2">
-                        <span url="">¿Ã¿¸</span>
+                        <span url="">Ïù¥Ï†Ñ</span>
                     </button>
                     <button type="submit" id="btnJoin">
-                        <span>¥Ÿ¿Ω</span>
+                        <span>Îã§Ïùå</span>
                     </button>
                 </div>
                 </form>

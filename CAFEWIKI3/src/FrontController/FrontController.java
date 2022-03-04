@@ -34,7 +34,7 @@ public class FrontController extends HttpServlet {
 	protected void service(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
-		request.setCharacterEncoding("EUC-KR");
+		request.setCharacterEncoding("UTF-8");
 		String requsetURI = request.getRequestURI();
 		String contextPath = request.getContextPath();
 		String command = requsetURI.substring(contextPath.length());

@@ -1,12 +1,12 @@
 <%@page import="java.util.List"%>
 <%@page import="Model.BoardVO"%>
 <%@page import="Model.CafeVO"%>
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-	pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="EUC-KR">
+<meta charset="UTF-8">
  <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -32,7 +32,7 @@
             <div class="logo">
                 <img id="img" src="./image/login/coffee.png">
                 <p id="title">Cafe Wiki</p>
-                <button id="btn" type="button" onclick="location.href='logout.do'">·Î±×¾Æ¿ô</button>
+                <button id="btn" type="button" onclick="location.href='logout.do'">ë¡œê·¸ì•„ì›ƒ</button>
             </div>
         </div>
 
@@ -57,15 +57,15 @@
             </div>
 
 
-            <!--  °øÁö»çÇ× view  -->
+            <!--  ê³µì§€ì‚¬í•­ view  -->
             <div class="board">
-                <h1 class="d-none">°Ô½ÃÆÇ</h1>
+                <h1 class="d-none">ê²Œì‹œíŒ</h1>
                 <div class="cafeboard">
                     <table class="table">
                         <thead class="thead">
                             <tr>
-                                <td>Á¦¸ñ</td>
-                                <td>³¯Â¥</td>
+                                <td>ì œëª©</td>
+                                <td>ë‚ ì§œ</td>
                             </tr>
 
                         </thead>
@@ -87,9 +87,9 @@
 
 
 			<%String[] review = vo.getReview().split(","); %>
-            <!--  ¹æ¹®ÀÚ ¸®ºä  -->
+            <!--  ë°©ë¬¸ìž ë¦¬ë·°  -->
             <div class="review">
-                <h1 class="r-none">¹æ¹®ÀÚ ¸®ºä</h1>
+                <h1 class="r-none">ë°©ë¬¸ìž ë¦¬ë·°</h1>
                 <table class="table">
                     <%for(int i=0;i<review.length;i++){ %>
                     <tbody class="tbody1">
@@ -114,16 +114,16 @@
         <!-- footer & menu part -->
         <div class="footer">
 			<div id="btn_group">
-				<button class ="btn" id="btn1" type="button" onclick="location.href='UserMain.jsp'">¸¶ÀÌ ÆäÀÌÁö</button>
+				<button class ="btn" id="btn1" type="button" onclick="location.href='UserMain.jsp'">ë§ˆì´ íŽ˜ì´ì§€</button>
 
 				<button class ="btn" id="btn2" type="button"
-					onclick="location.href='SearchMain.jsp'">Ä«Æä °Ë»ö</button>
+					onclick="location.href='SearchMain.jsp'">ì¹´íŽ˜ ê²€ìƒ‰</button>
 
 				<button class ="btn" id="btn3" type="button"
-					onclick="location.href='MyCoupon.jsp'">³» ÄíÆù °ü¸®</button>
+					onclick="location.href='MyCoupon.jsp'">ë‚´ ì¿ í° ê´€ë¦¬</button>
 
-				<button class ="btn" id="btn4" type="button" onclick="location.href='Update.jsp'">Á¤º¸
-					¼öÁ¤</button>
+				<button class ="btn" id="btn4" type="button" onclick="location.href='Update.jsp'">ì •ë³´
+					ìˆ˜ì •</button>
 			</div>
 		</div>
         <!-- footer & menu part -->

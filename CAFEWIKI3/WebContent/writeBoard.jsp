@@ -1,10 +1,10 @@
 <%@page import="Model.MemberVO"%>
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-	pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="EUC-KR">
+<meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -26,37 +26,37 @@
 			<div class="logo">
 				<img id="img" src="./image/login/coffee.png">
 				<p id="title">Cafe Wiki</p>
-				<button id="btn" type="button" onclick="location.href='logout.do'" class= "btn" >·Î±×¾Æ¿ô</button>
+				<button id="btn" type="button" onclick="location.href='logout.do'" class= "btn" >ë¡œê·¸ì•„ì›ƒ</button>
 			</div>
 		</div>
 		<%
 			MemberVO vo = (MemberVO) session.getAttribute("vo");
 		%>
 
-		<!--  °Ô½ÃÆÇ ÀÛ¼º -->
+		<!--  ê²Œì‹œíŒ ìž‘ì„± -->
 
 		<form action="write.do?o_num=<%=vo.getO_num()%>" class="writeboard"
 			name="writeboard" method="post" enctype="multipart/form-data">
 			<table class="table" id="list">
 				<tr>
-					<td class= "btn" >Á¦¸ñ</td>
+					<td class= "btn" >ì œëª©</td>
 					<td><input class="title" type="text" name="b_title"
 						id="" /></td>
 				</tr>
 				<tr>
-					<td class= "btn" >³»¿ë</td>
+					<td class= "btn" >ë‚´ìš©</td>
 					<td colspan="2"><textarea name="b_cont" rows="30" cols="70"
 							style="resize: none;"></textarea></td>
 				</tr>
 				<tr>
-					<td rowspan="2" class= "btn" >Ã·ºÎÆÄÀÏ</td>
+					<td rowspan="2" class= "btn" >ì²¨ë¶€íŒŒì¼</td>
 				</tr>
 				<tr>
 					<td id="3"><input type="file" class= "btn" name="b_file"></td>
 				</tr>
 				<tr>
-					<td colspan="2"><input type="reset" class= "btn"  value="´Ù½ÃÀÛ¼º">
-						<input type="submit" class= "btn"  value="ÀÛ¼º"></td>
+					<td colspan="2"><input type="reset" class= "btn"  value="ë‹¤ì‹œìž‘ì„±">
+						<input type="submit" class= "btn"  value="ìž‘ì„±"></td>
 				</tr>
 			</table>
 		</form>
@@ -64,17 +64,17 @@
 		<!-- footer & menu part -->
 		<div class="footer">
 			<div id="btn_group">
-				<button class= "btn" id="btn1" type="button" onclick="location.href='cafe.do'">¸¶ÀÌÆäÀÌÁö</button>
+				<button class= "btn" id="btn1" type="button" onclick="location.href='cafe.do'">ë§ˆì´íŽ˜ì´ì§€</button>
 
 				<button class= "btn" id="btn2" type="button"
-					onclick="location.href='BarcodeScan.jsp?o_num=<%=vo.getO_num()%>'">ÄíÆù
-					°ü¸®</button>
+					onclick="location.href='BarcodeScan.jsp?o_num=<%=vo.getO_num()%>'">ì¿ í°
+					ê´€ë¦¬</button>
 
 				<button class= "btn"  id="btn3" type="button"
-					onclick="location.href='customerManage.do'">³» È¸¿ø °ü¸®</button>
+					onclick="location.href='customerManage.do'">ë‚´ íšŒì› ê´€ë¦¬</button>
 
-				<button class= "btn" id="btn4" type="button" onclick="location.href='Update.jsp'">Á¤º¸
-					¼öÁ¤</button>
+				<button class= "btn" id="btn4" type="button" onclick="location.href='Update.jsp'">ì •ë³´
+					ìˆ˜ì •</button>
 			</div>
 		</div>
 	</div>

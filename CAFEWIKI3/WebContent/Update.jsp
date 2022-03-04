@@ -1,10 +1,10 @@
 <%@page import="Model.MemberVO"%>
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-	pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="EUC-KR">
+<meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -28,7 +28,7 @@
 				<img id="img" src="./image/login/coffee.png">
 				<p id="title">Cafe Wiki</p>
 				<button class="btn" id="btn" type="button"
-					onclick="location.href='logout.do'">·Î±×¾Æ¿ô</button>
+					onclick="location.href='logout.do'">ë¡œê·¸ì•„ì›ƒ</button>
 			</div>
 		</div>
 
@@ -39,54 +39,54 @@
 
 		<!-- main part -->
 		<div class="Main">
-			<h1 class="btn">È¸¿øÁ¤º¸ ¼öÁ¤</h1>
+			<h1 class="btn">íšŒì›ì •ë³´ ìˆ˜ì •</h1>
 			<div class="btn">
 				<h2 class="join_title">
-					È¸¿øID :
+					íšŒì›ID :
 					<%=vo.getId()%>
 				</h2>
 			</div>
 			<form action="update.do" method="post" id="update" >
 				<div class="btn">
 					<h3 class="join_title">
-						<label for="pswd1">ºñ¹Ð¹øÈ£</label>
+						<label for="pswd1">ë¹„ë°€ë²ˆí˜¸</label>
 					</h3>
 					<span class="box int_pass"> <input type="password" 
 						class="btn" name="pw" id="pswd1" class="int" maxlength="20"
-						placeholder="º¯°æÇÒ ºñ¹Ð¹øÈ£ ÀÔ·Â" style="border: none;"> <span id="alertTxt">»ç¿ëºÒ°¡</span>
+						placeholder="ë³€ê²½í•  ë¹„ë°€ë²ˆí˜¸ ìž…ë ¥" style="border: none;"> <span id="alertTxt">ì‚¬ìš©ë¶ˆê°€</span>
 					</span> <span class="error_next_box"></span>
 				</div>
 
 				<!-- MOBILE -->
 				<div class="btn">
 					<h3 class="join_title">
-						<label for="phoneNo">ÀüÈ­¹øÈ£</label>
+						<label for="phoneNo">ì „í™”ë²ˆí˜¸</label>
 					</h3>
 					<span class="box int_mobile"> <input type="text" class="btn"
 						name="tel" id="mobile" class="int" maxlength="16"
-						placeholder="º¯°æÇÒ ÀüÈ­¹øÈ£ ÀÔ·Â" style="border: none;">
+						placeholder="ë³€ê²½í•  ì „í™”ë²ˆí˜¸ ìž…ë ¥" style="border: none;">
 					</span> <span class="error_next_box"></span>
 				</div>
 
 				<!-- EMAIL -->
 				<div class="btn">
 					<h3 class="join_title">
-						<label for="email">ÀÌ¸ÞÀÏ<span class="optional"></span></label>
+						<label for="email">ì´ë©”ì¼<span class="optional"></span></label>
 					</h3>
 					<span class="box int_email"> <input type="text" class="btn" 
 						name="email" id="email" class="int" maxlength="100"
-						placeholder="º¯°æÇÒ ÀÌ¸ÞÀÏ ÀÔ·Â" style="border: none;">
+						placeholder="ë³€ê²½í•  ì´ë©”ì¼ ìž…ë ¥" style="border: none;">
 					</span>
 				</div>
 
 				<div class="btn_area" class="btn">
 					<button  type="submit" id="btnJoin2" onclick="fnSubmit2(); return false;">
-						<span class="btn">¼öÁ¤</span>
+						<span class="btn">ìˆ˜ì •</span>
 					</button>
 	
 					<button href= '#' onclick="de()" type="button"
 						id="btnJoin">
-						<span class="btn">È¸¿øÅ»Åð</span>
+						<span class="btn">íšŒì›íƒˆí‡´</span>
 					</button>
 				</div>
 		</div>
@@ -98,14 +98,14 @@
 		<!-- footer & menu part -->
 		<div class="footer">
 			<div id="btn_group">
-				<button class="btn" id="btn1" type="button" onclick="location.href='cafe.do'">¸¶ÀÌÆäÀÌÁö</button>
+				<button class="btn" id="btn1" type="button" onclick="location.href='cafe.do'">ë§ˆì´íŽ˜ì´ì§€</button>
 				<button class="btn" id="btn2" type="button"
-					onclick="location.href='BarcodeScan.jsp'">ÄíÆù
-					°ü¸®</button>
+					onclick="location.href='BarcodeScan.jsp'">ì¿ í°
+					ê´€ë¦¬</button>
 				<button class="btn" id="btn3" type="button"
-					onclick="location.href='customerManage.do'">³» È¸¿ø °ü¸®</button>
-				<button class="btn" id="btn4" type="button" onclick="location.href='Update.jsp'">Á¤º¸
-					¼öÁ¤</button>
+					onclick="location.href='customerManage.do'">ë‚´ íšŒì› ê´€ë¦¬</button>
+				<button class="btn" id="btn4" type="button" onclick="location.href='Update.jsp'">ì •ë³´
+					ìˆ˜ì •</button>
 			</div>
 		</div>
 		<%
@@ -114,13 +114,13 @@
 		<!-- footer & menu part -->
 		<div class="footer">
 			<div id="btn_group">
-				<button class="btn" id="btn1" type="button" onclick="location.href='UserMain.jsp'">¸¶ÀÌÆäÀÌÁö</button>
+				<button class="btn" id="btn1" type="button" onclick="location.href='UserMain.jsp'">ë§ˆì´íŽ˜ì´ì§€</button>
 				<button class="btn" id="btn2" type="button"
-					onclick="location.href='SearchMain.jsp'">Ä«Æä °Ë»ö</button>
+					onclick="location.href='SearchMain.jsp'">ì¹´íŽ˜ ê²€ìƒ‰</button>
 				<button class="btn" id="btn3" type="button"
-					onclick="location.href='MyCoupon.jsp'">³» ÄíÆù °ü¸®</button>
+					onclick="location.href='MyCoupon.jsp'">ë‚´ ì¿ í° ê´€ë¦¬</button>
 				<button class="btn" id="btn4" type="button"
-					onclick="location.href='Update.jsp'">Á¤º¸ ¼öÁ¤</button>
+					onclick="location.href='Update.jsp'">ì •ë³´ ìˆ˜ì •</button>
 
 			</div>
 		</div>
@@ -134,24 +134,24 @@
 
 	function fnSubmit2(){
 		if ($("#pswd1").val() == null || $("#pswd1").val() == "") {
-			alert("º¯°æÇÒ ºñ¹Ð¹øÈ£¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä.");
+			alert("ë³€ê²½í•  ë¹„ë°€ë²ˆí˜¸ë¥¼ ìž…ë ¥í•´ì£¼ì„¸ìš”.");
 			$("#pswd1").focus();
 			 
 			return false;
 			}
 		if ($("#mobile").val() == null || $("#mobile").val() == "") {
-			alert("º¯°æÇÒ ÀÌ¸ÞÀÏÀ» ÀÔ·ÂÇØÁÖ¼¼¿ä.");
+			alert("ë³€ê²½í•  ì´ë©”ì¼ì„ ìž…ë ¥í•´ì£¼ì„¸ìš”.");
 			$("#mobile").focus();
 			 
 			return false;
 			}
 		if ($("#email").val() == null || $("#email").val() == "") {
-			alert("º¯°æÇÒ ÀÌ¸ÞÀÏÀ» ÀÔ·ÂÇØÁÖ¼¼¿ä.");
+			alert("ë³€ê²½í•  ì´ë©”ì¼ì„ ìž…ë ¥í•´ì£¼ì„¸ìš”.");
 			$("#email").focus();
 			 
 			return false;
 			}
-		if (confirm("Á¤º¸¸¦ ¼öÁ¤ÇÏ½Ã°Ú½À´Ï±î?")) {
+		if (confirm("ì •ë³´ë¥¼ ìˆ˜ì •í•˜ì‹œê² ìŠµë‹ˆê¹Œ?")) {
 			 
 			$("#update").submit();
 			 
@@ -159,7 +159,7 @@
 			}
 	}
 	function de(){
-		if(confirm("Å»ÅðÇÏ½Ã°Ú½À´Ï±î?")){
+		if(confirm("íƒˆí‡´í•˜ì‹œê² ìŠµë‹ˆê¹Œ?")){
 	        location.href = "delete.do";
 	        return true;
 	    } else {

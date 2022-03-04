@@ -1,12 +1,12 @@
 <%@page import="java.util.List"%>
 <%@page import="Model.CafeVO"%>
 <%@page import="Model.MemberVO"%>
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-	pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="EUC-KR">
+<meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -51,7 +51,7 @@ a {
 			<div class="logo">
 				<img id="img" src="./image/login/coffee.png">
 				<p id="title">Cafe Wiki</p>
-				<button class="btn" id="btn" type="button" onclick="location.href='logout.do'">·Î±×¾Æ¿ô</button>
+				<button class="btn" id="btn" type="button" onclick="location.href='logout.do'">ë¡œê·¸ì•„ì›ƒ</button>
 			</div>
 		</div>
 
@@ -59,13 +59,13 @@ a {
 		<!-- main part -->
 		<div class="Main">
 
-			<!-- ÃßÃµ Ä«Æä °Ë»öÃ¢ ºÎºĞ -->
+			<!-- ì¶”ì²œ ì¹´í˜ ê²€ìƒ‰ì°½ ë¶€ë¶„ -->
 			<div class=all>
 				<div class="wrap" height="100">
 					<form action="searchname.do" method="post">
 						<div class="search_box">
 							<input class="btn" type="text" name="store" maxlength="225"
-								placeholder="Ä«ÆäÀÌ¸§À» ÀÔ·ÂÇØÁÖ¼¼¿ä">
+								placeholder="ì¹´í˜ì´ë¦„ì„ ì…ë ¥í•´ì£¼ì„¸ìš”">
 							<button type="submit">
 								<i class="fa fa-search"></i>
 							</button>
@@ -73,36 +73,36 @@ a {
 					</form>
 				</div>
 
-				<!-- ÃßÃµ Ä«Æä Ä«Å×°í¸® ºÎºĞ -->
+				<!-- ì¶”ì²œ ì¹´í˜ ì¹´í…Œê³ ë¦¬ ë¶€ë¶„ -->
 				<div class="category">
 					<form action="searchtype.do" method="post">
 						<div class="group1">
 							<button class="btn" type="button"
-								onclick="location.href='searchtype.do?type=<%=1%>'">°øºÎÇÏ±â
-								ÁÁÀº</button>
+								onclick="location.href='searchtype.do?type=<%=1%>'">ê³µë¶€í•˜ê¸°
+								ì¢‹ì€</button>
 							<button class="btn" type="button"
-								onclick="location.href='searchtype.do?type=<%=2%>'">Ä¿ÇÇ°¡
-								Æ¯º°ÇÑ</button>
+								onclick="location.href='searchtype.do?type=<%=2%>'">ì»¤í”¼ê°€
+								íŠ¹ë³„í•œ</button>
 							<button class="btn" type="button"
-								onclick="location.href='searchtype.do?type=<%=3%>'">Ç³°æÀÌ
-								ÁÁÀº</button>
+								onclick="location.href='searchtype.do?type=<%=3%>'">í’ê²½ì´
+								ì¢‹ì€</button>
 						</div>
 						<div class="group2">
 							<button class="btn" type="button"
-								onclick="location.href='searchtype.do?type=<%=4%>'">¼ö´Ù¶³±â
-								ÁÁÀº</button>
+								onclick="location.href='searchtype.do?type=<%=4%>'">ìˆ˜ë‹¤ë–¨ê¸°
+								ì¢‹ì€</button>
 							<button class="btn" type="button"
-								onclick="location.href='searchtype.do?type=<%=5%>'">µğÀúÆ®°¡
-								´Ù¾çÇÑ</button>
+								onclick="location.href='searchtype.do?type=<%=5%>'">ë””ì €íŠ¸ê°€
+								ë‹¤ì–‘í•œ</button>
 						</div>
 					</form>
 				</div>
 			</div>
 
-			<!-- Ä«Æä ¼øÀ§ -->
+			<!-- ì¹´í˜ ìˆœìœ„ -->
 			<div class="rankbox">
 				<form action="rank.do" method="post">
-				<p>ÀÎ±â ¼øÀ§!</p>
+				<p>ì¸ê¸° ìˆœìœ„!</p>
 					<%  int i=1;
 						if(crank != null){for(CafeVO cvo : crank){%>
 						<div class="rank">
@@ -116,7 +116,7 @@ a {
 				</form>
 			</div>
 
-			<!-- ÃßÃµ Ä«Æä °Ë»ö°á°ú Ç¥½Ã -->
+			<!-- ì¶”ì²œ ì¹´í˜ ê²€ìƒ‰ê²°ê³¼ í‘œì‹œ -->
 			<div class="result">
 				<%
 					if (clist != null) {
@@ -151,12 +151,12 @@ a {
 		<div class="footer">
 			<div id="btn_group">
 				<button class="btn" id="btn1" type="button"
-					onclick="location.href='UserMain.jsp'">¸¶ÀÌÆäÀÌÁö</button>
+					onclick="location.href='UserMain.jsp'">ë§ˆì´í˜ì´ì§€</button>
 				<button class="btn" id="btn2" type="button"
-					onclick="location.href='SearchMain.jsp'">Ä«Æä °Ë»ö</button>
+					onclick="location.href='SearchMain.jsp'">ì¹´í˜ ê²€ìƒ‰</button>
 				<button class="btn" id="btn3" type="button"
-					onclick="location.href='MyCoupon.jsp'">³» ÄíÆù °ü¸®</button>
-				<button class="btn" id="btn4" type="button" onclick="location.href='Update.jsp'">Á¤º¸ ¼öÁ¤</button>
+					onclick="location.href='MyCoupon.jsp'">ë‚´ ì¿ í° ê´€ë¦¬</button>
+				<button class="btn" id="btn4" type="button" onclick="location.href='Update.jsp'">ì •ë³´ ìˆ˜ì •</button>
 			</div>
 		</div>
 		<!-- footer & menu part -->

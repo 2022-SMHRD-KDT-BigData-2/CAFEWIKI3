@@ -19,7 +19,7 @@ public class cafeMainCon implements Command {
 	@Override
 	public String execute(HttpServletRequest request, HttpServletResponse response) {
 		try {
-			request.setCharacterEncoding("EUC-KR");
+			request.setCharacterEncoding("UTF-8");
 		} catch (UnsupportedEncodingException e2) {
 			e2.printStackTrace();
 		}

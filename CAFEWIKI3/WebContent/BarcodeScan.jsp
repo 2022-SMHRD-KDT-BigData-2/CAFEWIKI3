@@ -1,10 +1,10 @@
 <%@page import="Model.MemberVO"%>
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-	pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="EUC-KR">
+<meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,14 +27,14 @@
 				<img id="img" src="./image/login/coffee.png">
 				<p id="title">Cafe Wiki</p>
 				<button class="btn" id="btn" type="button"
-					onclick="location.href='logout.do'">·Î±×¾Æ¿ô</button>
+					onclick="location.href='logout.do'">ë¡œê·¸ì•„ì›ƒ</button>
 			</div>
 		</div>
 		<div class="Main">
-			<p class="btn">È¸¿ø¹øÈ£ ÀÔ·Â</p>
+			<p class="btn">íšŒì›ë²ˆí˜¸ ìž…ë ¥</p>
 			<form action="couponManage.do">
 				<input class="btn" type="text" name="u_num">
-				<input class="btn" type="submit" value="È®ÀÎ">
+				<input class="btn" type="submit" value="í™•ì¸">
 			</form>
 			<p></p>
 		</div>
@@ -43,13 +43,13 @@
 		<div class="footer">
 			<div id="btn_group">
 				<button class="btn" id="btn1" type="button"
-					onclick="location.href='cafe.do'">¸¶ÀÌÆäÀÌÁö</button>
+					onclick="location.href='cafe.do'">ë§ˆì´íŽ˜ì´ì§€</button>
 				<button class="btn" id="btn2" type="button"
-					onclick="location.href='BarcodeScan.jsp'">ÄíÆù°ü¸®</button>
+					onclick="location.href='BarcodeScan.jsp'">ì¿ í°ê´€ë¦¬</button>
 				<button class="btn" id="btn3" type="button"
-					onclick="location.href='customerManage.do'">È¸¿ø°ü¸®</button>
+					onclick="location.href='customerManage.do'">íšŒì›ê´€ë¦¬</button>
 				<button class="btn" id="btn4" type="button"
-					onclick="location.href='Update.jsp'">Á¤º¸¼öÁ¤</button>
+					onclick="location.href='Update.jsp'">ì •ë³´ìˆ˜ì •</button>
 			</div>
 		</div>
 		<!-- footer & menu part -->

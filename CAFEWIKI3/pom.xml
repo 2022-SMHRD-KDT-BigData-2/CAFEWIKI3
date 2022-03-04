@@ -37,6 +37,7 @@
 </dependency>
   </dependencies>
   <build>
+	<finalName>CAFEWIKI3</finalName>
   <pluginManagement>
     <plugins>
     <!-- 서버 배포 셋팅 -->

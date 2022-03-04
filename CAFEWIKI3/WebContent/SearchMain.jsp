@@ -42,7 +42,7 @@ a {
 	height: 100%;
 }
 
-#rpicture {
+.rpicture {
 	width: 140px;
 	height: 120px;
 }
@@ -53,6 +53,12 @@ a {
 
 #rank {
 	font-size: 25px;
+}
+.Cafe2{
+    width: 468px;
+    height:170px;
+    float: left;
+    border: none;
 }
 </style>
 <title>Insert title here</title>
@@ -125,25 +131,25 @@ a {
 			if (crank != null && clist == null) {%>
 			<p class="btn" id="rank">인기 순위!</p>
 			<%	for (CafeVO cvo : crank) {
-			%>
-			<table class="rankbox">
-				<tr class="btn" id="rname">
-					<th colspan="2" align="center"><a
-						href="CafeMain.do?o_num=<%=cvo.getO_num()%>"><%=i + "."%><%=cvo.getStore()%></a>
-					</th>
-				</tr>
-				<tr class="btn">
-					<td rowspan="3"><img id="rpicture" src="<%=cvo.getPicture()%>"></td>
-					<td><img src="./image/location.png"><%=cvo.getLocation()%></td>
-				</tr>
+			%><div class="Cafe2">
+					<div class="btn" id="cafetitle">
+						<a href="CafeMain.do?o_num=<%=cvo.getO_num()%>"><%=i + "."%><%=cvo.getStore()%></a>
+					</div>
 
-				<tr class="btn">
-					<td><img src="./image/tel.png"><%=cvo.getC_tel()%></td>
-				</tr>
-				<tr class="btn">
-					<td><img src="./image/time.png"><%=cvo.getTime()%></td>
-				</tr>
+					<div id="picture">
+						<img src="<%=cvo.getPicture()%>">
+					</div>
+					<div id="location">
+						<img src="./image/location.png">
+						<p class="btn"><%=cvo.getLocation()%></p>
+						<img src="./image/tel.png">
+						<p class="btn"><%=cvo.getC_tel()%></p>
+						<img src="./image/time.png">
+						<p class="btn"><%=cvo.getTime()%></p>
 
+					</div>
+				</div>
+			
 
 			</table>
 			<%

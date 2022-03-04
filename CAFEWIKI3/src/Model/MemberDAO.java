@@ -26,7 +26,7 @@ public class MemberDAO {
 		int cnt = session.insert("joinService", vo);
 		session.close();
 		return cnt;
-	}// 회원가입
+	}
 
 	public MemberVO login(MemberVO vo) {
 		SqlSession session = sqlSessionFactory.openSession();
@@ -34,7 +34,7 @@ public class MemberDAO {
 		session.close();
 
 		return uservo;
-	}// 로그인
+	}
 
 	public MemberVO idCheck(String id) {
 		SqlSession session = sqlSessionFactory.openSession();
@@ -42,7 +42,7 @@ public class MemberDAO {
 		session.close();
 
 		return vo;
-	}// 아이디 중복 확인
+	}
 
 	public MemberVO o_numCheck(String o_num) {
 		SqlSession session = sqlSessionFactory.openSession();
@@ -50,7 +50,7 @@ public class MemberDAO {
 		session.close();
 
 		return vo;
-	}// 사업자번호 중복 확인
+	}
 
 	public MemberVO scan(int u_num) {
 		SqlSession session = sqlSessionFactory.openSession();
@@ -61,7 +61,7 @@ public class MemberDAO {
 
 		return vo;
 
-	}// 바코드 스캔 할 회원번호 찾기
+	}
 
 	public int update(MemberVO vo) {
 
@@ -71,7 +71,7 @@ public class MemberDAO {
 		session.close();
 
 		return cnt;
-	}//회원정보수정
+	}
 
 	public int delete(String id) {
 		SqlSession session = sqlSessionFactory.openSession();
@@ -79,7 +79,7 @@ public class MemberDAO {
 		session.commit();
 		session.close();
 		return cnt;
-	}//회원삭제
+	}
 	
 	public MemberVO pwsearch(MemberVO vo) {
 		SqlSession session = sqlSessionFactory.openSession();
@@ -87,7 +87,7 @@ public class MemberDAO {
 		session.close();
 
 		return uservo;
-	}//비밀번호 찾기
+	}
 	
 	public int pwreset(MemberVO vo) {
 
@@ -97,5 +97,5 @@ public class MemberDAO {
 		session.close();
 
 		return cnt;
-	}//비밀번호 재설정
+	}
 }

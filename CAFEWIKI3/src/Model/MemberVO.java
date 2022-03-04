@@ -31,7 +31,7 @@ public class MemberVO {
 		this.pw = pw;
 		this.tel = tel;
 		this.email = email;
-	} // 회원정보수정
+	}
 
 	public MemberVO(String id, String pw, String name, String tel, String email, String birth, String gender,
 			int u_num) {
@@ -44,7 +44,7 @@ public class MemberVO {
 		this.birth = birth;
 		this.gender = gender;
 		this.u_num = u_num;
-	}// o_num제외
+	}
 
 	public MemberVO(String id, String pw, String name, String tel, String email, String birth, String gender) {
 		super();
@@ -55,7 +55,7 @@ public class MemberVO {
 		this.email = email;
 		this.birth = birth;
 		this.gender = gender;
-	}// o_num,u_num
+	}
 
 	public MemberVO(String id, String o_num, String pw, String name, String tel, String email, String birth,
 			String gender) {
@@ -68,24 +68,24 @@ public class MemberVO {
 		this.email = email;
 		this.birth = birth;
 		this.gender = gender;
-	}// u_num
+	}
 
 	public MemberVO(String id, String pw) {
 		super();
 		this.id = id;
 		this.pw = pw;
-	}// 로그인
+	}
 
 	public MemberVO(String id, String tel, String email) {
 		super();
 		this.id = id;
 		this.tel = tel;
 		this.email = email;
-	}//비밀번호 찾기
+	}
 
 	public MemberVO(int u_num) {
 		this.u_num = u_num;
-	}// 쿠폰 적립할 대상 찾기
+	}
 	
 	
 

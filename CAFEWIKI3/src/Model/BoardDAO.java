@@ -23,7 +23,6 @@ public class BoardDAO {
 		}
 
 	}
-	// =====================================================
 
 	public int writeBoard(BoardVO vo) {
 

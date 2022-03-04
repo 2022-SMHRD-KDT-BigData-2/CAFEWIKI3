@@ -64,7 +64,7 @@ public class CouponDAO {
 		int cnt = session.insert("updateCoupon", vo);
 		session.close();
 		return cnt;
-	}// 쿠폰 적립 or 사용
+	}
 
 	
 	public List<CouponVO> customerList(String o_num) {

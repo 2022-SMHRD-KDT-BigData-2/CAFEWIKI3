@@ -22,7 +22,7 @@
             <div class="logo">
                 <img id="img" src="./image/login/coffee.png">
                 <p id="title">Cafe Wiki</p>
-                <button id="btn" type="button" onclick="location.href='login.jsp'">로그아웃</button>
+                <button id="btn" type="button" onclick="location.href='logout.do'">로그아웃</button>
             </div>
         </div>
 <div class="Main">
@@ -68,18 +68,6 @@
 
 		</div>
 
-
-		<!-- footer & menu part -->
-		<div class="footer">
-			<div id="btn_group">
-				<button id="btn1" type="button"
-					onclick="location.href='Mypage.html'">마이페이지</button>
-				<button id="btn2" type="submit">쿠폰관리</button>
-				<button id="btn3" type="submit">회원관리</button>
-				<button id="btn4" type="submit">정보수정</button>
-			</div>
-		</div>
-		<!-- footer & menu part -->
 
 	</div>
 </body>

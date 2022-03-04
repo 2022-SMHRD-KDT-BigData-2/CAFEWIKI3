@@ -7,22 +7,18 @@
 <html>
 <head>
 <meta charset="EUC-KR">
- <meta http-equiv="X-UA-Compatible" content="IE=edge">
-                <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                <link rel="preconnect" href="https://fonts.googleapis.com">
-                <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-                <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
-                <link
-                    href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Lobster&family=Noto+Sans:ital,wght@1,700&family=Source+Sans+Pro:wght@700&display=swap"
-                    rel="stylesheet">
-                <link rel="stylesheet" type="text/css" href="./css/customerManage.css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jua&display=swap"
+	rel="stylesheet">
+<link
+	href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Lobster&family=Noto+Sans:ital,wght@1,700&family=Source+Sans+Pro:wght@700&display=swap"
+	rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="./css/customerManage2.css">
 <script src="https://kit.fontawesome.com/8c9374f376.js"
 	crossorigin="anonymous"></script>
-	<style type="text/css">
-	@font-face{
-		font-family: 'Jua';
-	}
-	</style>
 <title></title>
 </head>
 <body>
@@ -53,7 +49,8 @@
 			<div class="logo">
 				<img id="img" src="./image/login/coffee.png">
 				<p id="title">Cafe Wiki</p>
-				<button id="btn" type="button" onclick="location.href='login.jsp'">로그아웃</button>
+				<button class="btn" id="btn" type="button"
+					onclick="location.href='logout.do'">로그아웃</button>
 			</div>
 		</div>
 
@@ -61,8 +58,10 @@
 
 		<!-- main part -->
 		<div class="Main">
-		<%for (int i = 0; i < id.size(); i++) {%>
-			<form class="customer">	
+			<%
+				for (int i = 0; i < id.size(); i++) {
+			%>
+			<form class="customer">
 				<div class="tablewrap">
 					<table class="table1">
 						<tr>
@@ -71,74 +70,98 @@
 						</tr>
 						<tr>
 							<td id="accu">
-							
-								<p>
+
+								<p class="btn">
 									ID :
-									<%=id.get(i)%><br>
-									보유 스탬프 수 :
+									<%=id.get(i)%><br> 보유 스탬프 수 :
 									<%=CouponSum[i]%></p>
 
 							</td>
-							<td id="plus" rowspan="2"><img src="./image/plus.png">
-							</td>
+							<td id="plus" rowspan="2"><a id="hide<%=i%>"
+								onclick="dis()"> <img src="./image/plus.png"></a></td>
 						</tr>
 					</table>
 				</div>
+				<span style="display: none;" id="dis<%=i%>">
+					<table class="table2">
 
+						<h3 class="btn">최근 내역</h3>
 
-				<table class="table2">
-					
-					<h1>최근 내역</h1>
-					
-					<tr>
-						<th>적립/사용</th>
-						<th>개수</th>
-						<th>날짜</th>
-					</tr>
-					<%
-						for (CouponVO cusvo : clist) {
-						if ((id.get(i)).equals(cusvo.getId())) {
-					%>
-					<tr>
-						<td>
-							<%
-								int a = cusvo.getStamp();
-							if (a > 0) {
-							%>적립 <%
-								} else {
-							%> 사용 <%
-								}
-							%>
-						</td>
-						<td>
-							<%
-								if (a < 0) {
-							%> <%=-cusvo.getStamp()%> <%
- 							} else {
- 							%> <%=cusvo.getStamp()%> <%
- 							}
- 							%>
-
+						<tr class="btn">
+							<th>적립/사용</th>
+							<th>개수</th>
+							<th>날짜</th>
+						</tr>
+						<%
+							for (CouponVO cusvo : clist) {
+							if ((id.get(i)).equals(cusvo.getId())) {
+						%>
+						<tr class="btn">
 							<td>
-                           <%=cusvo.getS_Date()%>
-                           </td>
-                           </tr>
-							<%}}%>
-						</table>
-						
-                                </form>
-                                <%}%>
-                         </div>
-				<div class="footer">
-				<div id="btn_group">
-				<button id="btn1" type="button" onclick="location.href='Mypage.html'">마이페이지</button>
-				<button id="btn2" type="submit">쿠폰관리</button>
-				<button id="btn3" type="submit">회원관리</button>
-				<button id="btn4" type="submit">정보수정</button>
-				</div>
-				</div>
-				<!-- footer & menu part -->
+								<%
+									int a = cusvo.getStamp();
+								if (a > 0) {
+								%>적립 <%
+									} else if (a < 0) {
+								%> 사용 <%
+									} else {
+								%> 쿠폰생성 <%
+									}
+								%>
+							</td>
+							<td>
+								<%
+									if (a < 0) {
+								%> <%=-cusvo.getStamp()%> <%
+ 	} else {
+ %> <%=cusvo.getStamp()%> <%
+ 	}
+ %>
+							
+							<td><%=cusvo.getS_Date()%></td>
+						</tr>
+						<%
+							}
+						}
+						%>
+					</table>
+				</span>
+			</form>
+			<%
+				}
+			%>
+		</div>
+		<!-- footer & menu part -->
+		<div class="footer">
+			<div id="btn_group">
+				<button class="btn" id="btn1" type="button"
+					onclick="location.href='cafe.do'">마이페이지</button>
 
+				<button class="btn" id="btn2" type="button"
+					onclick="location.href='BarcodeScan.jsp'">쿠폰 관리</button>
+
+				<button class="btn" id="btn3" type="button"
+					onclick="location.href='customerManage.do'">내 회원 관리</button>
+
+				<button class="btn" id="btn4" type="button"
+					onclick="location.href='Update.jsp'">정보 수정</button>
 			</div>
+		</div>
+		<!-- footer & menu part -->
+
+	</div>
+
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript"> 
+    <%for (int i = 0; i < id.size(); i++) {%>
+    $(function (){
+        $("#hide<%=i%>").click
+        (function (){
+          $("#dis<%=i%>").toggle();
+			});
+		})
+	<%}%>
+		
+	</script>
 </body>
 </html>

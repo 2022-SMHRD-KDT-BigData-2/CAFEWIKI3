@@ -77,6 +77,30 @@ public class CafeDAO {
 
 	}
 	
+	public CafeVO searchOneCafe(String o_num) {
+
+		SqlSession session = sqlSessionFactory.openSession();
+
+		CafeVO cvo = session.selectOne("searchOneCafe", o_num);
+
+		session.close();
+
+		return cvo;
+
+	}
+	
+	public CafeVO selectOneCafe(String store) {
+
+		SqlSession session = sqlSessionFactory.openSession();
+
+		CafeVO cvo = session.selectOne("selectOneCafe", store);
+
+		session.close();
+
+		return cvo;
+
+	}
+	
 	public List<CafeVO> CafeRank() {
 
 		SqlSession session = sqlSessionFactory.openSession();
@@ -88,6 +112,5 @@ public class CafeDAO {
 		return list;
 
 	}
-	
 
 }

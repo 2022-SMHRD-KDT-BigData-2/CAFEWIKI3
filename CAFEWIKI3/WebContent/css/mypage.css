@@ -100,18 +100,25 @@ a{
 
 #barcode-input{
     border: 2px dotted black;
-    height: 100px;
+    height: 90px;
+    padding: 5px;
+    text-align: center;
+    font-size: 105px;
+    width: 487px;
 }
 
 #num{
     font-size: 18px;
-    padding: 10px 0 0px 30px;
+    padding: 10px;
+    text-align : center;
+    letter-spacing:20px;
 }
 
-#plus{
-    margin-top: -20px;
+.plus{
+    margin-top: 35px;
     text-align: end;
 }
+
 
 #cafe-name{
     text-align: left;
@@ -126,6 +133,7 @@ a{
     font-size: 22px;
     font-weight: 700;
     padding: 10px;
+    width : 478px;
 }
 
 #name1{
@@ -133,6 +141,7 @@ a{
     margin-bottom: 10px;
     border: 1px dashed rgb(124, 122, 122);
     background-color: #fff;
+    width : 478px;
 }
 
 #name2{
@@ -140,6 +149,7 @@ a{
     margin-bottom: 10px;
     border: 1px dashed rgb(124, 122, 122);
     background-color: #fff;
+    width : 478px;
 }
 
 #name3{
@@ -147,6 +157,7 @@ a{
     margin-bottom: 10px;
     border: 1px dashed rgb(124, 122, 122);
     background-color: #fff;
+    width : 478px;
 }
 
 
@@ -178,7 +189,7 @@ a{
 }
 #btn1{
     border-right: 2px dotted rgb(46, 45, 45);
-    padding: 20px 30px 20px 30px;
+    padding: 23px 30px 20px 30px;
     font-size: 20px;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;

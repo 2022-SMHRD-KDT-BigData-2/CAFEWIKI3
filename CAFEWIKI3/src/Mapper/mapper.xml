@@ -138,6 +138,11 @@
 		group by u.id, s.o_num
 	</select>
 
+	<insert id="addCoupon" parameterType="Model.CouponVO">
+		insert into coupon
+		values (#{id}, sysdate, 0, #{o_num})
+	</insert>
+
 	<insert id="updateCoupon" parameterType="Model.CouponVO">
 		insert into coupon
 		values (#{id}, sysdate, #{stamp}, #{o_num})
@@ -160,6 +165,16 @@
 		pw=#{pw}
 		where id =#{id}
 	</update>
+
+	<select id="searchOneCafe" resultType="Model.CafeVO">
+		select * from cafe_info
+		where o_num = #{o_num}
+	</select>
+
+	<select id="selectOneCafe" resultType="Model.CafeVO">
+		select * from cafe_info
+		where store = #{store}
+	</select>
 	
 	<select id="CafeRank" resultType="Model.CafeVO">
 		select s.store
@@ -168,4 +183,5 @@
 		group by s.store
 		order by sum(c.stamp) desc
 	</select>
+	
 </mapper>

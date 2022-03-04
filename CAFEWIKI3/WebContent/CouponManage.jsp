@@ -13,21 +13,21 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Lobster&family=Noto+Sans:ital,wght@1,700&family=Source+Sans+Pro:wght@700&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="./css/couponManage.css">
+    <link rel="stylesheet" type="text/css" href="./css/couponManage2.css">
     <script src="https://kit.fontawesome.com/8c9374f376.js" crossorigin="anonymous"></script>
 <title>Insert title here</title>
 </head>
 <body>
 <% CouponVO svo = (CouponVO)request.getAttribute("svo"); %>
 
-<body>
+
     <!-- header part -->
     <div class="container">
         <div class="header">
             <div class="logo">
                 <img id="img" src="./image/login/coffee.png">
                 <p id="title">Cafe Wiki</p>
-                <button id="btn" type="button" onclick="location.href='login.jsp'">로그아웃</button>
+                <button class="btn" id="btn" type="button" onclick="location.href='logout.do'">로그아웃</button>
             </div>
         </div>
 
@@ -41,14 +41,14 @@
                 </div>
                     
                 <div class="coupon">
-                    <form action="couponUpdate.do?id=<%=svo.getId()%>" method="post">
+                    <form id = "text" action="couponUpdate.do?id=<%=svo.getId()%>" method="post">
                         <input id="plus1" type="radio"  name="update" value="plus">
                         <label for="plus1"><span>적립</span></label> 
                         <input id="minus1" type="radio" name="update" value="minus">
-                        <label for="minus1"><span>사용</span></label><br>
+                        <label for="minus1" ><span>사용</span></label><br>
 
                         <input id="input1" type="text" name="stamp">
-                        <input id="input2" type="submit" value="적용">
+                        <input class="btn" id="input2" type="submit" value="적용" onclick="say()">
                     </form>
                 </div>
 
@@ -60,18 +60,33 @@
 
 
 
-        <!-- footer & menu part -->
+         <!-- footer & menu part -->
         <div class="footer">
-            <div id="btn_group">
-                <button id="btn1" type="button" onclick="location.href='Mypage.html'">마이페이지</button>
-                <button id="btn2" type="submit">쿠폰관리 </button>
-                <button id="btn3" type="submit">회원관리 </button>
-                <button id="btn4" type="submit">정보수정 </button>
-            </div>
-        </div>
+			<div id="btn_group">
+				<button class="btn" id="btn1" type="button" onclick="location.href='cafe.do'">마이페이지</button>
+
+				<button class="btn" id="btn2" type="button"
+					onclick="location.href='BarcodeScan.jsp'">쿠폰
+					관리</button>
+
+				<button class="btn" id="btn3" type="button"
+					onclick="location.href='customerManage.do'">내 회원 관리</button>
+
+				<button class="btn" id="btn4" type="button" onclick="location.href='Update.jsp'">정보
+					수정</button>
+			</div>
+		</div>
         <!-- footer & menu part -->
 
     </div>
+
 </body>
-</body>
+<script type="text/javascript">
+function say(){
+	var textBox = document.getElementById("input1");	
+	if(textBox != null ){
+		alert(<%=svo.getId()%>+"님에게"+textBox.value+"개를 적립/사용하시겠습니까?");
+		}		
+	}
+</script >
 </html>

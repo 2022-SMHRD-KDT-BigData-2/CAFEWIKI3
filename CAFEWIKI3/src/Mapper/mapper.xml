@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="Model.MemberDAO">
+	<insert id="joinService" parameterType="Model.MemberVO">
+		insert into user_info
+		values(#{id},
+		#{o_num},
+		#{pw},
+		#{name},
+		#{tel},
+		#{email},
+		#{birth},
+		#{gender},
+		u_num_seq.nextval)
+	</insert>
+
+	<select id="loginService" parameterType="Model.MemberVO"
+		resultType="Model.MemberVO">
+		select * from user_info
+		where id =#{id} and pw =#{pw}
+	</select>
+
+
+	<select id="selectCafe" resultType="Model.CafeVO">
+		select u.o_num, c.location,
+		c.picture, c.review, c.type, c.store, c.time, c.c_tel
+		from cafe_info c,
+		user_info u
+		where c.o_num = u.o_num
+		and u.o_num = #{o_num}
+	</select>
+
+	<select id="selectBoard" resultType="Model.BoardVO">
+		select b.b_num, b.b_title,
+		b.b_date, b.b_cont, b.b_file, u.o_num
+		from board b, user_info u
+		where
+		b.o_num = u.o_num
+		and b.o_num = #{o_num}
+	</select>
+
+	<insert id="writeBoard" parameterType="Model.BoardVO">
+		insert into board
+		values
+		(board_num_seq.nextval,
+		#{b_title},
+		sysdate,
+		#{b_cont},
+		#{b_file},
+		#{o_num}
+		)
+	</insert>
+
+	<select id="viewBoard" resultType="Model.BoardVO">
+		select c.store, c.o_num,
+		b.b_num, b.b_title, b.b_cont, b.b_file, b.b_date
+		from board b,
+		cafe_info c
+		where b.o_num = c.o_num
+		and b.b_num = #{b_num}
+
+	</select>
+
+	<select id="viewBoard2" resultType="Model.CafeVO">
+		select c.store, c.o_num,
+		b.b_num
+		from board b, cafe_info c
+		where b.o_num = c.o_num
+		and b.b_num =
+		#{b_num}
+
+	</select>
+
+	<select id="searchCafeName" resultType="Model.CafeVO">
+		select * from cafe_info
+		where store like '%'||#{store}||'%'
+	</select>
+
+	<select id="searchCafeType" resultType="Model.CafeVO">
+		select * from cafe_info
+		where type = #{type}
+	</select>
+
+	<select id="idCheck" resultType="Model.MemberVO">
+		select*from user_info
+		where
+		id=#{id}
+	</select>
+
+	<select id="o_numCheck" resultType="Model.MemberVO">
+		select*from user_info
+		where
+		o_num = #{o_num}
+	</select>
+
+	<select id="selectCoupon" resultType="Model.CouponVO">
+		select*from coupon
+		where id
+		= #{id}
+	</select>
+
+	<update id="updateService" parameterType="Model.MemberVO">
+		update user_info set
+		pw=#{pw}, tel=#{tel}, email=#{email}
+		where id =#{id}
+	</update>
+
+	<delete id="deleteService">
+		delete from user_info
+		where id = #{id}
+	</delete>
+
+	<select id="customerList" resultType="Model.CouponVO">
+		select u.id, s.s_date,
+		s.stamp,s.o_num
+		from user_info u, coupon s
+		where u.id = s.id
+		and s.o_num
+		= #{o_num}
+		order by s.s_date desc, u.id
+	</select>
+
+	<select id="barcodeScan" resultType="Model.MemberVO">
+		select * from user_info
+		where u_num = #{u_num}
+	</select>
+
+	<select id="barcodeScan2" resultType="Model.CouponVO">
+		select u.id, sum(s.stamp),
+		s.o_num
+		from user_info u, coupon s
+		where u.id = #{id}
+		and u.id = s.id
+		and
+		s.o_num = #{o_num}
+		group by u.id, s.o_num
+	</select>
+
+	<insert id="updateCoupon" parameterType="Model.CouponVO">
+		insert into coupon
+		values (#{id}, sysdate, #{stamp}, #{o_num})
+	</insert>
+
+	<select id="selectcouponname" resultType="Model.CafeVO">
+		select *
+		from cafe_info
+		where o_num=#{o_num}
+	</select>
+	<select id="pwsearch" parameterType="Model.MemberVO"
+		resultType="Model.MemberVO">
+		select * from user_info
+		where id =#{id} and email =#{email}
+		and tel=#{tel}
+	</select>
+
+	<update id="pwresetService" parameterType="Model.MemberVO">
+		update user_info set
+		pw=#{pw}
+		where id =#{id}
+	</update>
+	
+	<select id="CafeRank" resultType="Model.CafeVO">
+		select s.store
+		from coupon c, cafe_info s
+		where c.o_num = s.o_num
+		group by s.store
+		order by sum(c.stamp) desc
+	</select>
+</mapper>

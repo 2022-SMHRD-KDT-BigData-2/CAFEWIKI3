@@ -1,0 +1,94 @@
+<%@page import="Model.CafeVO"%>
+<%@page import="Model.MemberVO"%>
+<%@page import="Model.BoardVO"%>
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Lobster&family=Noto+Sans:ital,wght@1,700&family=Source+Sans+Pro:wght@700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./css/viewBoard.css">
+    <script src="https://kit.fontawesome.com/8c9374f376.js" crossorigin="anonymous"></script>
+<title>Insert title here</title>
+</head>
+<body>
+<%
+		BoardVO bvo = (BoardVO)request.getAttribute("bvo");
+		CafeVO cvo = (CafeVO)request.getAttribute("cvo");
+	
+	%>
+    <!-- header part -->
+    <div class="container">
+        <div class="header">
+            <div class="logo">
+                <img id="img" src="./image/login/coffee.png">
+                <p id="title">Cafe Wiki</p>
+                <button id="btn" type="button" onclick="location.href='login.jsp'">로그아웃</button>
+            </div>
+        </div>
+
+
+
+        <!-- main part -->
+
+        <div class="Main">
+            <div id="board">
+                <h1>
+                    <%=cvo.getStore() %>
+                </h1>
+                <table id="list" >
+                    <tr>
+                        <td id="veiwtitle">
+                            <%=bvo.getB_title() %>
+                        </td>
+                        <td id="date">
+                            <%=bvo.getB_date() %>
+                    </tr>
+
+                    <tr height="200px">
+                        <td id="cont" colspan="2">
+                            <%=bvo.getB_cont() %>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="2">
+
+                            <img alt="" src="img/<%=bvo.getB_file()%>">
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td id="veiwbtn" colspan="2">
+                            <button id="btnJoin" type="button" onclick="location.href='cafe.do'">뒤로가기</button>
+                        </td>
+                    </tr>
+
+                </table>
+            </div>
+        </div>
+
+
+
+
+        <!-- footer & menu part -->
+        <div class="footer">
+			<div id="btn_group">
+			<button onclick="location.href='.jsp'" type="button" id="btnJoin2">
+						<span>돌아가기</span>
+					</button>
+			</div>
+		</div>
+        <!-- footer & menu part -->
+
+    </div>
+</body>
+</html>

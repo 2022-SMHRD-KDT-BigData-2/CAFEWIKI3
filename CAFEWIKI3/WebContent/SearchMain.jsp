@@ -19,31 +19,50 @@
 <link rel="stylesheet" type="text/css" href="./css/searchMain3.css">
 <script src="https://kit.fontawesome.com/8c9374f376.js"
 	crossorigin="anonymous"></script>
-	<style type="text/css">
-.btn{
- 	font-family: 'Jua';
-    src: url("./font2/Jua.TTF");
+<style type="text/css">
+.btn {
+	font-family: 'Jua';
+	src: url("./font2/Jua.TTF");
 }
+
 a {
 	text-decoration-line: none;
-	color : #784748;
+	color: #784748;
 }
-.rankbox{
-	height : 100%;
-	margin-top : 5px;
-	margin-bottom : 5px;
+
+.rankbox {
+	width: 400px;
+	height: 150px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	margin-top: 5px;
 }
-.rank{
-	height : 100%;
-}	
-	</style>
+
+.rank {
+	height: 100%;
+}
+
+#rpicture {
+	width: 140px;
+	height: 120px;
+}
+
+#rname {
+	font-size: 25px;
+}
+
+#rank {
+	font-size: 25px;
+}
+</style>
 <title>Insert title here</title>
 </head>
 <body>
 
 	<%
-		List<CafeVO> clist = (List<CafeVO>) request.getAttribute("clist");
-		List<CafeVO> crank = (List<CafeVO>)request.getAttribute("crank");
+		HttpSession session2 = request.getSession();
+	List<CafeVO> clist = (List<CafeVO>) request.getAttribute("clist");
+	List<CafeVO> crank = (List<CafeVO>) session2.getAttribute("crank");
 	%>
 	<!-- header part -->
 	<div class="container">
@@ -51,7 +70,8 @@ a {
 			<div class="logo">
 				<img id="img" src="./image/login/coffee.png">
 				<p id="title">Cafe Wiki</p>
-				<button class="btn" id="btn" type="button" onclick="location.href='logout.do'">로그아웃</button>
+				<button class="btn" id="btn" type="button"
+					onclick="location.href='logout.do'">로그아웃</button>
 			</div>
 		</div>
 
@@ -100,21 +120,40 @@ a {
 			</div>
 
 			<!-- 카페 순위 -->
-			<div class="rankbox">
-				<form action="rank.do" method="post">
-				<p>인기 순위!</p>
-					<%  int i=1;
-						if(crank != null){for(CafeVO cvo : crank){%>
-						<div class="rank">
-							<p><%=i %>.<%=cvo.getStore()%></p>
-						</div>
-					<%  i++;
-						if(i==4){
-						break;
-						}
-					}} %>
-				</form>
-			</div>
+			<p class="btn" id="rank">인기 순위!</p>
+			<%
+				int i = 1;
+			if (crank != null) {
+				for (CafeVO cvo : crank) {
+			%>
+			<table class="rankbox">
+				<tr class="btn" id="rname">
+					<th colspan="2" align="center"><a
+						href="CafeMain.do?o_num=<%=cvo.getO_num()%>"><%=i + "."%><%=cvo.getStore()%></a>
+					</th>
+				</tr>
+				<tr class="btn">
+					<td rowspan="3"><img id="rpicture" src="<%=cvo.getPicture()%>"></td>
+					<td><img src="./image/location.png"><%=cvo.getLocation()%></td>
+				</tr>
+
+				<tr class="btn">
+					<td><img src="./image/tel.png"><%=cvo.getC_tel()%></td>
+				</tr>
+				<tr class="btn">
+					<td><img src="./image/time.png"><%=cvo.getTime()%></td>
+				</tr>
+
+
+			</table>
+			<%
+				i++;
+			if (i == 4) {
+				break;
+			}
+			}
+			}
+			%>
 
 			<!-- 추천 카페 검색결과 표시 -->
 			<div class="result">
@@ -124,7 +163,7 @@ a {
 				%>
 				<div class="Cafe">
 					<div class="btn" id="cafetitle">
-						<a href="CafeMain.do?o_num=<%=vo.getO_num()%>" ><%=vo.getStore()%></a>
+						<a href="CafeMain.do?o_num=<%=vo.getO_num()%>"><%=vo.getStore()%></a>
 					</div>
 
 					<div id="picture">
@@ -156,7 +195,8 @@ a {
 					onclick="location.href='SearchMain.jsp'">카페 검색</button>
 				<button class="btn" id="btn3" type="button"
 					onclick="location.href='MyCoupon.jsp'">내 쿠폰 관리</button>
-				<button class="btn" id="btn4" type="button" onclick="location.href='Update.jsp'">정보 수정</button>
+				<button class="btn" id="btn4" type="button"
+					onclick="location.href='Update.jsp'">정보 수정</button>
 			</div>
 		</div>
 		<!-- footer & menu part -->

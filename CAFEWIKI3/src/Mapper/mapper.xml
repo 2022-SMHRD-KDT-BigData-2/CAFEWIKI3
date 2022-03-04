@@ -177,10 +177,10 @@
 	</select>
 	
 	<select id="CafeRank" resultType="Model.CafeVO">
-		select s.store
+		select s.o_num, s.location, s.picture, s.review, s.type, s.store, s.time, s.c_tel
 		from coupon c, cafe_info s
 		where c.o_num = s.o_num
-		group by s.store
+		group by s.store, s.o_num, s.location, s.picture, s.review, s.type, s.time, s.c_tel
 		order by sum(c.stamp) desc
 	</select>
 	

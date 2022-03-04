@@ -30,11 +30,14 @@ public class loginCon implements Command {
 		CouponDAO dao2 = new CouponDAO();
 		List<CouponVO> slist = dao2.selectCoupon(id);	
 		List<CafeVO> clist = new ArrayList<CafeVO>();
+		CafeDAO cdao = new CafeDAO();
+		List<CafeVO> crank = cdao.CafeRank();
 		HttpSession session = request.getSession();
 
 		if (uservo != null) {
 			session.setAttribute("vo", uservo);
 			session.setAttribute("slist", slist);
+			session.setAttribute("crank", crank);
 
 		} else {			
 			session.setAttribute("login", "F");

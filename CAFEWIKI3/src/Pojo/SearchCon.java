@@ -19,7 +19,6 @@ public class SearchCon implements Command{
 		String store = request.getParameter("store");
 		CafeDAO dao = new CafeDAO();
 		List<CafeVO> clist = null;
-		List<CafeVO> crank = dao.CafeRank();
 		if(type != null) {
 			clist = dao.searchCafeType(type);		
 		}else {
@@ -29,7 +28,6 @@ public class SearchCon implements Command{
 		}
 				
 		request.setAttribute("clist", clist);
-		request.setAttribute("crank", crank);
 
 		return "SearchMain.jsp";
 	}

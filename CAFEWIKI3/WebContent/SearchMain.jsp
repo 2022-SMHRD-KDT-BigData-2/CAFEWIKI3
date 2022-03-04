@@ -119,11 +119,12 @@ a {
 			</div>
 
 			<!-- 카페 순위 -->
-			<p class="btn" id="rank">인기 순위!</p>
+			
 			<%
 				int i = 1;
-			if (crank != null) {
-				for (CafeVO cvo : crank) {
+			if (crank != null && clist == null) {%>
+			<p class="btn" id="rank">인기 순위!</p>
+			<%	for (CafeVO cvo : crank) {
 			%>
 			<table class="rankbox">
 				<tr class="btn" id="rname">

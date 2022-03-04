@@ -30,7 +30,7 @@ public class CouponCon implements Command{
 		HttpSession session = request.getSession();
 		session.setAttribute("clist", clist);
 		session.setAttribute("slist", slist);
-		
+		  
 		return "redirect:MyCoupon.jsp";
 	}
 

@@ -23,7 +23,7 @@
 </head>
 <body>
 	<%
-	CafeVO vo = (CafeVO)request.getAttribute("cvo");
+	CafeVO vo = (CafeVO)request.getAttribute("cvo");  
 	List<BoardVO> Blist = (List<BoardVO>)request.getAttribute("bvo");
 	%>
     <!-- header part -->

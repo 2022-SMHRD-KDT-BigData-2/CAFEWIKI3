@@ -50,7 +50,7 @@ a {
 		<div class="header">
 			<div class="logo">
 				<img id="img" src="./image/login/coffee.png">
-				<p id="title">Cafe Wiki</p>
+				<p id="title" >Cafe Wiki</p>
 				<button class="btn" id="btn" type="button" onclick="location.href='logout.do'">로그아웃</button>
 			</div>
 		</div>

@@ -61,9 +61,12 @@
 
                     <tr>
                         <td colspan="2">
+                        <%if(bvo.getB_file() != null){ %>
 
-                            <img alt="" src="img/<%=bvo.getB_file()%>">
-
+                            <img alt="" src="img/<%=bvo.getB_file()%>" width="630" height="500"  >
+						<%}else{ %>
+						 	<img alt="" src="img/<%=bvo.getB_file()%>" >
+						 	<%} %>
                         </td>
                     </tr>
                     <tr>

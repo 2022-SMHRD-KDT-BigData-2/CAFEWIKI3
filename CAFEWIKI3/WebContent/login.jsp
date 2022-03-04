@@ -12,6 +12,7 @@
 <body>
 <% String login = (String)session.getAttribute("login");
 	session.removeAttribute("login");
+
 %>
 	<section class="login-form">
 		<form method="post" action="login.do" id="login">

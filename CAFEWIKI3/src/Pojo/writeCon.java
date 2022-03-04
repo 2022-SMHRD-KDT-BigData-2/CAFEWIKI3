@@ -45,9 +45,9 @@ public class writeCon implements Command {
 			int cnt = dao.writeBoard(vo);
 
 			if (cnt > 0) {
-				System.out.println("게시글 작성 성공");
+				System.out.println("write success");
 			} else {
-				System.out.println("게시글 작성 실패");
+				System.out.println("failed");
 			}
 
 		} catch (IOException e) {

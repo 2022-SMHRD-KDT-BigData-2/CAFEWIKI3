@@ -15,7 +15,7 @@
         rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="./css/usercorrection.css">
     <script src="https://kit.fontawesome.com/8c9374f376.js" crossorigin="anonymous"></script>
-<title>Insert title here</title>
+<title></title>
 </head>
 <body>
     <!-- header part -->

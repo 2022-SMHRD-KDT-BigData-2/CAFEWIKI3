@@ -86,7 +86,6 @@ public class FrontController extends HttpServlet {
 		if (com != null)
 			nextPage = com.execute(request, response);
 		// ========================================================================================
-		// 페이지이동 처리
 		if (nextPage != null) {
 			if (nextPage.contains("redirect")) {
 				response.sendRedirect(nextPage.split(":")[1]);

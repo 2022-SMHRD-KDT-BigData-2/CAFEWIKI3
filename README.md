@@ -14,9 +14,8 @@
 - 서버환경 : tomcat9.0
 - 데이터베이스 : oracle
 - 빌드도구 : maven
-- 디자인도구
 ## 대표이미지
-![로그인main](https://user-images.githubusercontent.com/98806546/156995981-2bc3f5e9-a445-4b05-8e75-2c740f166000.PNG)
+![image](https://user-images.githubusercontent.com/98806546/157779752-de084b65-b2e0-4810-882a-b076f42c53a8.png)
 ## 서비스 URL
 
 

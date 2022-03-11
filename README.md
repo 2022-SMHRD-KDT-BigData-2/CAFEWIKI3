@@ -16,7 +16,8 @@
 - 빌드도구 : maven
 ## 대표이미지
 ![image](https://user-images.githubusercontent.com/98806546/157779752-de084b65-b2e0-4810-882a-b076f42c53a8.png)
-## 서비스 URL
 
+## 서비스 URL
+-https://project-student-3.ddns.net/CAFEWIKI3/login.jsp
 
 
